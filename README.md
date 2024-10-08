@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Crypto Provider
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+![image](https://github.com/user-attachments/assets/c6c96152-825f-4a3a-a1e2-fb89cf5f2024)
 
-## Available Scripts
+Crypto Info App is a web application that provides detailed information about various cryptocurrencies, crypto exchanges, and the latest crypto-related news. Users can click on any cryptocurrency to view its details, price trends via a graph, and relevant exchange information. The app also features a table displaying live tickers of top cryptocurrencies.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Cryptocurrency Details**: Get detailed information about individual cryptocurrencies such as name, symbol, price, market cap, etc.
+- **Crypto Price Graph**: View historical price trends for each cryptocurrency in an interactive graph.
+- **Crypto Exchanges**: Access details of different crypto exchanges, including trading pairs and fees.
+- **News Section**: Stay updated with the latest crypto news from various sources.
+- **Ticker Table**: Displays a live ticker of the top cryptocurrencies by price and market cap.
+  
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js, Chart.js (or react-chartjs-2), 
+- **Data Fetching**: Redux Query
+- **State Management**: Redux
+- **UI Components**: Ant Design
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## APIs
 
-### `npm test`
+This application integrates with several external APIs to fetch live data:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Crypto API**: Used to fetch cryptocurrency data (Coinranking API).
+- **Exchange API**: Fetches information about crypto exchanges. (CoinGecko API)
+- **News API**: Fetches the latest news related to cryptocurrencies.
 
-### `npm run build`
+### Environment Variables
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app uses environment variables to store API keys and sensitive information. Please create a `.env` file in the root directory and add your API keys:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+REACT_APP_CRYPTO_API_KEY=your_crypto_api_key
+REACT_APP_EXCHANGE_API_KEY=your_exchange_api_key
+REACT_APP_NEWS_API_KEY=your_news_api_key
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+To run the application locally:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/replyre/crypto-provider-v2.git
+   cd crypto-provider-v2
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Set up environment variables**: Create a `.env` file in the root directory as mentioned in the **APIs** section.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Run the application**:
+   ```bash
+   npm start
+   ```
 
-## Learn More
+## Folder Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+crypto-info-app/
+├── public/
+├── src/
+│   ├── components/        # Reusable components
+│   ├── pages/             # Pages for different routes (Home, CoinDetails, Exchanges, News)
+│   ├── app/             # Redux and Redux Query setup for state and data fetching
+│   ├── services/          # API query hooks created using Redux Query
+│   ├── App.js             # Main application component
+│   ├── index.js           # Entry point for the app
+├── .env                   # Environment variables
+├── package.json           # App dependencies
+└── README.md              # Project documentation
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
+1. **Home Page**: Displays a ticker table with the top cryptocurrencies.
+2.  **Coins Page**: Display all the crypto coins.
+3. **Coin Details Page**: Click on any coin in the ticker to view detailed stats and a price trend graph.
+ ![image](https://github.com/user-attachments/assets/9b6a84d0-1739-4f92-b658-c8b8081ba9cd)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Exchanges Page**: Lists major exchanges and their respective information.
+ ![image](https://github.com/user-attachments/assets/2eb87f85-6afa-4723-90ce-d7e33e96009e)
 
-### Analyzing the Bundle Size
+5. **News Section**: Shows a list of recent news articles related to cryptocurrency.
+![image](https://github.com/user-attachments/assets/816ca17b-eb15-4cc8-8dd3-5c38434af62f)
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+We welcome contributions! If you have suggestions or bug reports, please open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
