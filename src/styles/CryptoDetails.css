@@ -1,0 +1,113 @@
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.stats-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.stats-coin {
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+.stats-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #eaeaea;
+  border-radius: 5px;
+  margin-top: 2px;
+}
+.stats-desc:last-child {
+  border-bottom: none;
+}
+.stats-desc:hover {
+  background-color: azure;
+}
+.stats-desc-title {
+  display: flex;
+  gap: 10px;
+  font-weight: 400;
+}
+
+.ant-card-body {
+  width: 100%;
+}
+
+/* Styling for the card that holds the coin links */
+.coin-links.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Styling for the title of the coin links section */
+.coin-details-heading {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  /* text-align: center; */
+}
+
+/* Styling for each individual link row */
+.coin-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  text-transform: capitalize;
+}
+.coin-link:hover {
+  background-color: azure;
+}
+/* Styling for the link type title */
+.link-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin: 0;
+}
+
+/* Styling for the anchor link */
+.coin-link a {
+  font-size: 16px;
+  color: #1a73e8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: bold;
+}
+
+.coin-link a:hover {
+  color: #0c4da2; /* Darker blue on hover */
+}
+
+/* Styling for the last row to remove the bottom border */
+.coin-link:last-child {
+  border-bottom: none;
+}
+
+.crypto-details h1 {
+  font-size: 70pxs;
+}
+.live-graph-mob {
+  display: none;
+}
+@media (max-width: 600px) {
+  .live-graph {
+    display: none;
+  }
+  .live-graph-mob {
+    display: block;
+  }
+}

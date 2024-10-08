@@ -1,0 +1,87 @@
+.crypto-logo {
+  transform: translate(0px, -10px);
+  height: 50px;
+  width: 50px;
+  perspective: 800px;
+  transition: all 1s;
+  /* mix-blend-mode: multiply; */
+}
+.crypto-card:hover .crypto-logo {
+  height: 100px;
+  width: 100px;
+  transform: translate(0px, 50px) rotateY(360deg);
+}
+
+.crypto-search-button .ant-btn-primary {
+  background-color: #012b52; /* Custom color */
+  border-color: #001529;
+  color: white;
+}
+
+.crypto-search-button .ant-btn-primary:hover {
+  background-color: #001529 !important; /* Color on hover */
+  border-color: #001529 !important;
+  color: #ad9b00;
+}
+.crypto-search-button {
+  width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .crypto-search-button {
+    width: 300px;
+  }
+}
+
+/* Styling for the card that holds the coin links */
+.coin-links.card {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Styling for the title of the coin links section */
+.coin-details-heading {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  /* text-align: center; */
+}
+
+/* Styling for each individual link row */
+.coin-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eaeaea;
+  text-transform: capitalize;
+}
+
+/* Styling for the link type title */
+.link-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #666;
+  margin: 0;
+}
+
+/* Styling for the anchor link */
+.coin-link a {
+  font-size: 16px;
+  color: #1a73e8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.coin-link a:hover {
+  color: #0c4da2; /* Darker blue on hover */
+}
+
+/* Styling for the last row to remove the bottom border */
+.coin-link:last-child {
+  border-bottom: none;
+}

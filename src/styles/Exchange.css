@@ -1,0 +1,10 @@
+.exchange-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.exchage-details-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

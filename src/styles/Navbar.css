@@ -1,0 +1,61 @@
+.nav-container {
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #001529;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo {
+  color: white !important;
+  margin-left: 10px;
+}
+
+.menu-control-container {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.menu-desktop {
+  display: flex;
+  min-width: 300px;
+}
+
+.menu-mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu-desktop {
+    display: none;
+  }
+  .menu-mobile {
+    display: block;
+    width: 100%;
+  }
+  .logo-container {
+    display: block;
+    align-items: center;
+  }
+  .menu-control-container {
+    display: block;
+  }
+}
+
+.logo-container .ant-typography a {
+  color: white;
+}
+.ant-drawer-close {
+  color: #ad9b00;
+}
+
+.logo-container .ant-btn-primary.ant-btn-solid {
+  background: transparent;
+  color: #ad9b00;
+}
